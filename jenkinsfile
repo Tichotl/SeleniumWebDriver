@@ -1,0 +1,15 @@
+pipeline {
+  agent any
+  stages {
+    stage('Version') {
+      steps {
+        sh 'python --version'
+      }
+    }
+    stage('WebDriver') {
+      steps {
+        sh 'python seleniumwebdrivergit.py'
+      }
+    }
+  }
+}
